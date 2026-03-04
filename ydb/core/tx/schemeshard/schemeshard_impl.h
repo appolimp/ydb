@@ -1796,6 +1796,7 @@ public:
     void FromForcedCompactionInfo(NKikimrForcedCompaction::TForcedCompaction& compaction, const TForcedCompactionInfo& forcedCompactionInfo);
 
     void CompleteForcedCompactionForShard(const TShardIdx& shardIdx, const TActorContext &ctx);
+    void RetryForcedCompactionForShard(const TShardIdx& shardIdx);
     void ProcessForcedCompactionQueues();
 
     void EnqueueForcedCompaction(const TShardIdx& shardIdx);
